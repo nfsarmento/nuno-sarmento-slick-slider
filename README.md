@@ -2,15 +2,6 @@
 
 Nuno Sarmento Slick Slider, an easy-to-use WordPress Plugin that enables you to create beautiful, professional and responsive sliders with Slick.
 
-**Plugin Name**
-Contributors: nunosarmento
-Donate link: https://www.nuno-sarmento.com
-Tags: slider, slick, shortcode, content, page, css, post, responsive, admin
-Requires at least: 3.0.1
-Tested up to: 4.7.2
-Stable tag: 1.0.1
-
-
 Nuno Sarmento Slick Slider, an easy-to-use WordPress Plugin that enables you to create beautiful, professional and responsive sliders with Slick.
 
 **Description**
@@ -42,17 +33,23 @@ At this stage we haven't implemented every Slick feature, but if there is a feat
 [![Nuno Sarmento Slick Slider Plugin](https://i.ytimg.com/vi/nOCU0rKOrfM/1.jpg)](https://www.youtube.com/watch?v=nOCU0rKOrfM)
 
 
+
+
 **Suggestions**
 
 If you have suggestions for a new add-on, feel free to email me at nfsarmento@gmail.com .
 Or follow me on Twitter!
 https://twitter.com/Nuno_M_Sarmento.
 
+
+
 **Installation**
 
 1. Upload the plugin files to the `/wp-content/plugins/Nuno-Sarmento-slick-slider` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Use the Settings->Plugin Name screen to configure the plugin.
+
+
 
 **Frequently Asked Questions**
 
@@ -67,6 +64,8 @@ Sure you can, we have created special function for this purpose under slider set
 Can I change the slider options?
 
 Sure you can, we have added almost all Slick functions to the plugin, under NS Slider settings you will find several options to change the slider behaviour.
+
+
 
 **Plugin Screenshots**
 
