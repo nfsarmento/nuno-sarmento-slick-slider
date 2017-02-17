@@ -1,0 +1,219 @@
+"Project-Id-Version: Slick Slider\n"
+"POT-Creation-Date: 2017-01-20 20:22+0000\n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en_GB\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin/settings.php:25
+msgid "Slider Settings"
+msgstr ""
+
+#: ../admin/settings.php:35
+msgid "Slide or Fade ?"
+msgstr ""
+
+#: ../admin/settings.php:44
+msgid "Autoplay"
+msgstr ""
+
+#: ../admin/settings.php:53
+msgid "Transition speed"
+msgstr ""
+
+#: ../admin/settings.php:65
+msgid "Navigation arrows"
+msgstr ""
+
+#: ../admin/settings.php:75
+msgid "Arrows color"
+msgstr ""
+
+#: ../admin/settings.php:84
+msgid "Pagination dots"
+msgstr ""
+
+#: ../admin/settings.php:94
+msgid "Dots color"
+msgstr ""
+
+#: ../admin/settings.php:105
+msgid "Adaptive height"
+msgstr ""
+
+#: ../admin/settings.php:136 ../admin/settings.php:155 ../admin/settings.php:171
+#: ../admin/settings.php:190
+msgid "Enable"
+msgstr ""
+
+#: ../admin/settings.php:199
+msgid "Choose options to customize your slider"
+msgstr ""
+
+#: ../admin/settings.php:210
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../admin/settings.php:228
+msgid "Credits"
+msgstr ""
+
+#: ../admin/settings.php:271
+msgid ""
+"This plugin is based on Slick, a jQuery plugin by Ken Wheeler. You can visit "
+"the official website here: <a href=\"https://kenwheeler.github.io/slick/\" "
+"title=\"Slick official site\">https://kenwheeler.github.io/slick/"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:13
+msgid "NS Slider"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:14
+msgid "Parent Slide:"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:15
+msgid "All Slides"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:16
+msgid "View Slide"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:17
+msgid "Add New Slide"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:18
+msgid "Add New"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:19
+msgid "Edit Slide"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:20
+msgid "Update Slide"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:21
+msgid "Search Slide"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:22
+msgid "Not found"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:23
+msgid "Not found in Trash"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:26
+msgid "slick-image"
+msgstr ""
+
+#: ../any-slick-slider-cpt.php:27
+msgid "Here are the Slicky Slides"
+msgstr ""
+
+#: ../any-slick-slider.php:156
+msgid "Settings"
+msgstr ""
+
+
+msgid "Enable Auto Play"
+msgstr ""
+
+msgid "Display Direction Arrows"
+msgstr ""
+
+msgid "Display Pagination Dots"
+msgstr ""
+
+msgid "Enable Adaptive Height"
+msgstr ""
+
+msgid "Choose the options for your slider"
+msgstr ""
+
+msgid "Speed"
+msgstr ""
+
+msgid "How-to"
+msgstr ""
+
+msgid ""
+"First, create your slides in \"NS Slider\". Add Title, content and a "
+"featured image."
+msgstr ""
+
+msgid ""
+"Then add the slider shortcode <code>[slick_slider_tend]</code> on a page or a "
+"post."
+msgstr ""
+
+msgid ""
+"You can also call the function <code>&lt;?php nuno_sarmento_nsss_slider(); ?&gt;</code> in "
+"your theme templates."
+msgstr ""
+
+msgid "Slick options"
+msgstr ""
+
+msgid "Slider Effect"
+msgstr ""
+
+msgid "Slide"
+msgstr ""
+
+msgid "Fade"
+msgstr ""
+
+msgid "Auto Play and Adaptive Height"
+msgstr ""
+
+msgid "Transition Speed: "
+msgstr ""
+
+msgid "Navigation"
+msgstr ""
+
+msgid "Colors"
+msgstr ""
+
+msgid "Arrows color: "
+msgstr ""
+
+msgid "Dots color: "
+msgstr ""
+
+msgid "CSS customization"
+msgstr ""
+
+msgid ""
+"If you want to customize the output of the slider, here is the generated code:"
+msgstr ""
+
+msgid "Your can override the class you need in your own stylesheet:"
+msgstr " styles : "
+
+msgid "The slider container"
+msgstr ""
+
+msgid "The slider slides"
+msgstr ""
+
+msgid "The image container"
+msgstr ""
+
+msgid "The content container"
+msgstr ""
