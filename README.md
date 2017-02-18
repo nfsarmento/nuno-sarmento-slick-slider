@@ -9,20 +9,20 @@ At this stage we haven't implemented every Slick feature, but if there is a feat
 
 **Current features**
 
-* Admin Option Panel.
-* Custom Post Type NS Slider.
-* Fully responsive.
-* Option for Custom CSS .
-* Option to change Arrows color.
-* Option to change Autoplay.
-* Option to change Dots color.
-* Option to change Slide or Fade.
-* Option to change Transition speed.
-* Option to enable or disabled Adaptive height.
-* Option to enable or disabled Navigation arrows.
-* Option to enable or disabled Pagination dots.
-* Visual editor TinyMce button for adding shortcode.
-* Server System Report + How to use page
+* Admin Option Panel. <br />
+* Custom Post Type NS Slider. <br />
+* Fully responsive. <br />
+* Option for Custom CSS . <br />
+* Option to change Arrows color. <br />
+* Option to change Autoplay. <br />
+* Option to change Dots color. <br />
+* Option to change Slide or Fade. <br />
+* Option to change Transition speed. <br />
+* Option to enable or disabled Adaptive height. <br />
+* Option to enable or disabled Navigation arrows. <br />
+* Option to enable or disabled Pagination dots. <br />
+* Visual editor TinyMce button for adding shortcode. <br />
+* Server System Report + How to use page <br />
 
 
 
@@ -43,25 +43,25 @@ https://twitter.com/Nuno_M_Sarmento.
 
 **Installation**
 
-1. Upload the plugin files to the `/wp-content/plugins/Nuno-Sarmento-slick-slider` directory, or install the plugin through the WordPress plugins screen directly.
-2. Activate the plugin through the 'Plugins' screen in WordPress.
-3. Use the Settings->Plugin Name screen to configure the plugin.
+1. Upload the plugin files to the `/wp-content/plugins/Nuno-Sarmento-slick-slider` directory, or install the plugin through the WordPress plugins screen directly. <br />
+2. Activate the plugin through the 'Plugins' screen in WordPress. <br />
+3. Use the Settings->Plugin Name screen to configure the plugin. <br />
 
 
 
 **Frequently Asked Questions**
 
-How do I add the plugin on a post or page ?
+How do I add the plugin on a post or page ? <br />
 
-You just need to click on slider's button on your visual editor or just add the shortcode [slick_slider_tend] on your post or page.
+You just need to click on slider's button on your visual editor or just add the shortcode [slick_slider_tend] on your post or page. <br />
 
-Can I modify the slider styling?
+Can I modify the slider styling? <br />
 
-Sure you can, we have created special function for this purpose under slider setting you will find NS Custom Css admin page where you can add your styling.
+Sure you can, we have created special function for this purpose under slider setting you will find NS Custom Css admin page where you can add your styling. <br />
 
-Can I change the slider options?
+Can I change the slider options? <br />
 
-Sure you can, we have added almost all Slick functions to the plugin, under NS Slider settings you will find several options to change the slider behaviour.
+Sure you can, we have added almost all Slick functions to the plugin, under NS Slider settings you will find several options to change the slider behaviour. <br />
 
 
 
