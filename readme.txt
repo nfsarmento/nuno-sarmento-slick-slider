@@ -12,7 +12,7 @@ Nuno Sarmento Slick Slider, an easy-to-use WordPress Plugin that enables you to 
 
 == Description ==
 
-I have tried to keep this plugin as simple as possible, you are not going to be overwhelmed with options like some of the slideshow extensions out there.
+I have tried to keep this plugin as simple as possible, you are not going to be overwhelmed with options like some of the slideshow plugins out there.
 At this stage we haven't implemented every Slick feature, but if there is a feature that you'd really like to see, please let us know.
 
 **Current features**

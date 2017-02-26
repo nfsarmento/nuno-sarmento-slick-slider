@@ -74,7 +74,7 @@ Sure you can, we have added almost all Slick functions to the plugin, under NS S
 ![Other NS Plugins](https://github.com/nfsarmento/nuno-sarmento-slick-slider/blob/master/assets/images/screenshot-5.png "Optional title")
 ![Server Report](https://github.com/nfsarmento/nuno-sarmento-slick-slider/blob/master/assets/images/screenshot-6.png "Optional title")
 ![Custom CSS](https://github.com/nfsarmento/nuno-sarmento-slick-slider/blob/master/assets/images/screenshot-7.png "Optional title")
-![Simple Slidert](https://github.com/nfsarmento/nuno-sarmento-slick-slider/blob/master/assets/images/screenshot-8.png "Optional title")
+![Simple Slider](https://github.com/nfsarmento/nuno-sarmento-slick-slider/blob/master/assets/images/screenshot-8.png "Optional title")
 
 
 **Changelog**
