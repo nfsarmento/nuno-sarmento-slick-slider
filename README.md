@@ -1,6 +1,6 @@
-# Nuno Sarmento Slick Slider WordPress Plugin
+# Slick Slider WordPress Plugin
 
-Nuno Sarmento Slick Slider, an easy-to-use WordPress Plugin that enables you to create beautiful, professional and responsive sliders with Slick.
+Slick Slider, an easy-to-use WordPress Plugin that enables you to create beautiful, professional and responsive sliders with Slick.
 
 **Description**
 
@@ -60,11 +60,3 @@ Sure you can, we have added almost all Slick functions to the plugin, under NS S
 ![Custom CSS](https://github.com/nfsarmento/nuno-sarmento-slick-slider/blob/master/assets/images/screenshot-7.png "Optional title")
 ![Simple Slider](https://github.com/nfsarmento/nuno-sarmento-slick-slider/blob/master/assets/images/screenshot-8.png "Optional title")
 
-
-**Changelog**
-
-1.0.0
-Name standards.
-
-1.0.1
-Colour picker
