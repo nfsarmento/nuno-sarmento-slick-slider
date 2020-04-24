@@ -25,22 +25,6 @@ At this stage we haven't implemented every Slick feature, but if there is a feat
 * Server System Report + How to use page <br />
 
 
-
-**Click here to watch the plugin video**
-
-[![Nuno Sarmento Slick Slider Plugin](https://i.ytimg.com/vi/nOCU0rKOrfM/1.jpg)](https://www.youtube.com/watch?v=nOCU0rKOrfM)
-
-
-
-
-**Suggestions**
-
-If you have suggestions for a new add-on, feel free to email me at nfsarmento@gmail.com .
-Or follow me on Twitter!
-https://twitter.com/Nuno_M_Sarmento.
-
-
-
 **Installation**
 
 1. Upload the plugin files to the `/wp-content/plugins/Nuno-Sarmento-slick-slider` directory, or install the plugin through the WordPress plugins screen directly. <br />
