@@ -3,8 +3,8 @@ Contributors: nunosarmento
 Donate link: https://www.nuno-sarmento.com
 Tags: slider, slick, shortcode, content, page, css, post, responsive, admin
 Requires at least: 3.0.1
-Tested up to: 4.7.2
-Stable tag: 1.0.1
+Tested up to: 5.3
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Nuno Sarmento Slick Slider, an easy-to-use WordPress Plugin that enables you to 
 
 == Description ==
 
-I have tried to keep this plugin as simple as possible, you are not going to be overwhelmed with options like some of the slideshow plugins out there.
+I have tried to keep this plugin as simple as possible, you are not going to be overwhelmed with options like some of the slideshow extensions out there.
 At this stage we haven't implemented every Slick feature, but if there is a feature that you'd really like to see, please let us know.
 
 **Current features**
@@ -54,7 +54,7 @@ https://twitter.com/Nuno_M_Sarmento.
 
 = How do I add the plugin on a post or page ? =
 
-You just need to click on slider's button on your visual editor or just add the shortcode [slick_slider_tend] on your post or page.
+You just need to click on slider's button on your visual editor or just add the shortcode [slick_slider_ns] on your post or page.
 
 = Can I modify the slider styling? =
 
@@ -82,6 +82,9 @@ Name standards.
 
 = 1.0.1 =
 Colour picker
+
+= 1.0.2 =
+Tidy up code & new settings layout
 
 **Ordered list:**
 

@@ -150,6 +150,8 @@
 	 */
 
 	class Browser {
+
+
 		public $_agent = '';
 		public $_browser_name = '';
 		public $_version = '';
@@ -221,6 +223,18 @@
 
 		public $OPERATING_SYSTEM_UNKNOWN = 'unknown';
 
+
+		function __construct($useragent="") {
+			$this->reset();
+			if( $useragent != "" ) {
+				$this->setUserAgent($useragent);
+			}
+			else {
+				$this->determine();
+			}
+		}
+
+
 		function Browser($useragent="") {
 			$this->reset();
 			if( $useragent != "" ) {
@@ -230,6 +244,7 @@
 				$this->determine();
 			}
 		}
+
 
 		/**
 		* Reset all properties

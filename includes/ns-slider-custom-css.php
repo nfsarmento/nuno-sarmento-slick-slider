@@ -1,4 +1,13 @@
-<?php defined('ABSPATH') or die();
+<?php
+/**
+ *
+ * Slider Custom CSS
+ *
+ * @package Slider Custom CSS
+ */
+
+defined( 'ABSPATH' ) || die();
+
 
 class NUNO_SARMENTO_ss_Custom_Css {
 
@@ -40,7 +49,7 @@ class NUNO_SARMENTO_ss_Custom_Css {
 			<form method="post" action="options.php">
 				<?php
 					settings_fields( 'nuno_sarmento_nsss_custom_css_option_group' );
-					do_settings_sections( 'nuno-sarmento-nsss-custom-css-admin' );
+					do_settings_sections( 'ns-slider-custom-css-admin' );
 					submit_button();
 				?>
 			</form>
@@ -59,14 +68,14 @@ class NUNO_SARMENTO_ss_Custom_Css {
 			'nuno_sarmento_nsss_custom_css_setting_section', // id
 			'Settings', // title
 			array( $this, 'nuno_sarmento_nsss_custom_css_section_info' ), // callback
-			'nuno-sarmento-nsss-custom-css-admin' // page
+			'ns-slider-custom-css-admin' // page
 		);
 
 		add_settings_field(
 			'nuno_sarmento_ccj_custom_css_0', // id
 			'CSS', // title
 			array( $this, 'nuno_sarmento_ccj_custom_css_0_callback' ), // callback
-			'nuno-sarmento-nsss-custom-css-admin', // page
+			'ns-slider-custom-css-admin', // page
 			'nuno_sarmento_nsss_custom_css_setting_section' // section
 		);
 	}
@@ -95,10 +104,12 @@ if ( is_admin() )
 	$nuno_sarmento_nsss_custom_css = new NUNO_SARMENTO_ss_Custom_Css();
 
 
-function nuno_sarmento_nsss_custom_css()
- {
-   $nuno_sarmento_nsss_custom_css_options = get_option( 'nuno_sarmento_css_js_option_name' ); // Array of All Options
-   $stylecss = $nuno_sarmento_nsss_custom_css_options['nuno_sarmento_ccj_custom_css_0'];
-   echo "<style>" . $stylecss . "</style>";
- }
-add_action('wp_head', 'nuno_sarmento_nsss_custom_css', 100);
+/**
+ * Nsss_custom_css
+ */
+function nuno_sarmento_nsss_custom_css() {
+	$nuno_sarmento_nsss_custom_css_options = get_option( 'nuno_sarmento_css_js_option_name' );
+	$stylecss = $nuno_sarmento_nsss_custom_css_options['nuno_sarmento_ccj_custom_css_0'];
+	echo "<style>" . $stylecss . "</style>";
+}
+add_action( 'wp_head', 'nuno_sarmento_nsss_custom_css', 100 );

@@ -13,7 +13,7 @@
             ed.addCommand('codebutton', function() {
                 var selected_text = ed.selection.getContent();
                 var return_text = '';
-                return_text = '[slick_slider_tend]';
+                return_text = '[slick_slider_ns]';
                 ed.execCommand('mceInsertContent', 0, return_text);
             });
         },

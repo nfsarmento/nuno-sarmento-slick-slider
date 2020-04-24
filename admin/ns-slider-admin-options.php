@@ -1,9 +1,16 @@
-<?php defined('ABSPATH') or die();
+<?php
+/**
+ *
+ * Options
+ *
+ * @package Options
+ */
 
-/* ------------------------------------------
-// Opptions page  --------------------------------
---------------------------------------------- */
+defined( 'ABSPATH' ) || die();
 
+/**
+ * Options plugin page
+ */
 add_action( 'admin_menu', 'nuno_sarmento_nsss_add_admin_menu' );
 add_action( 'admin_init', 'nuno_sarmento_nsss_settings_init' );
 
@@ -20,11 +27,10 @@ function nuno_sarmento_nsss_add_admin_menu(  ) {
 
 }
 
-/* ------------------------------------------
-// Setting init --------------------------------
---------------------------------------------- */
-
-function nuno_sarmento_nsss_settings_init(  ) {
+/**
+ * Plugin page settings init
+ */
+function nuno_sarmento_nsss_settings_init() {
 
 		add_settings_section(
 			'nuno_sarmento_nsss_plugin_page_section',
@@ -33,7 +39,7 @@ function nuno_sarmento_nsss_settings_init(  ) {
 			'nuno_sarmento_nsss_plugin_page'
 		);
 
-		//Style
+		/* Style */
 
 		add_settings_field(
 			'nuno_sarmento_nsss_style',
@@ -44,7 +50,7 @@ function nuno_sarmento_nsss_settings_init(  ) {
 		);
 		register_setting( 'nuno_sarmento_nsss_plugin_page', 'nuno_sarmento_nsss_style' );
 
-		//Autoplay
+		/* Autoplay */
 
 		add_settings_field(
 			'nuno_sarmento_nsss_auto',
@@ -55,7 +61,7 @@ function nuno_sarmento_nsss_settings_init(  ) {
 		);
 		register_setting( 'nuno_sarmento_nsss_plugin_page', 'nuno_sarmento_nsss_auto' );
 
-		//Transition
+		/* Transition */
 
 		add_settings_field(
 			'nuno_sarmento_nsss_speed',
@@ -66,7 +72,7 @@ function nuno_sarmento_nsss_settings_init(  ) {
 		);
 		register_setting( 'nuno_sarmento_nsss_plugin_page', 'nuno_sarmento_nsss_speed' );
 
-		// Arrows and Dots
+		/* Arrows and Dots */
 
 		add_settings_field(
 			'nuno_sarmento_nsss_arrows',
@@ -105,8 +111,7 @@ function nuno_sarmento_nsss_settings_init(  ) {
 
 		register_setting( 'nuno_sarmento_nsss_plugin_page', 'nuno_sarmento_nsss_dotscolor' );
 
-
-		//Height
+		/* Height */
 
 		add_settings_field(
 			'nuno_sarmento_nsss_height',
@@ -117,67 +122,37 @@ function nuno_sarmento_nsss_settings_init(  ) {
 		);
 		register_setting( 'nuno_sarmento_nsss_plugin_page', 'nuno_sarmento_nsss_height' );
 
-		//Slides to show & Slides to scroll
-
-		// add_settings_field(
-		// 	'nuno_sarmento_nsss_slidestoshow',
-		// 	__( 'Slides to show', 'nuno-sarmento-nsss-slick-slider' ),
-		// 	'nuno_sarmento_nsss_slidestoshow_render',
-		// 	'nuno_sarmento_nsss_plugin_page',
-		// 	'nuno_sarmento_nsss_plugin_page_section'
-		// );
-		// register_setting( 'nuno_sarmento_nsss_plugin_page', 'nuno_sarmento_nsss_slidestoshow' );
-		//
-		// add_settings_field(
-		// 	'nuno_sarmento_nsss_slidestoscroll',
-		// 	__( 'Slides to scroll', 'nuno-sarmento-nsss-slick-slider' ),
-		// 	'nuno_sarmento_nsss_slidestoscroll_render',
-		// 	'nuno_sarmento_nsss_plugin_page',
-		// 	'nuno_sarmento_nsss_plugin_page_section'
-		// );
-		// register_setting( 'nuno_sarmento_nsss_plugin_page', 'nuno_sarmento_nsss_slidestoscroll' );
-		//
-		// add_settings_field(
-		// 	'nuno_sarmento_nsss_infinite',
-		// 	__( 'Infinite', 'nuno-sarmento-nsss-slick-slider' ),
-		// 	'nuno_sarmento_nsss_infinite_render',
-		// 	'nuno_sarmento_nsss_plugin_page',
-		// 	'nuno_sarmento_nsss_plugin_page_section'
-		// );
-		// register_setting( 'nuno_sarmento_nsss_plugin_page', 'nuno_sarmento_nsss_infinite' );
-
-
-		// About Page register
+		/* About Page register */
 		add_settings_section(
 			'nuno_sarmento_nsss_plugin_page_section',
-			'', // Title
+			'',
 			'ns_nsss_about_callback',
 			'ns-nsss-setting-about'
 		);
 
-		// Sytem Report register
+		/* Sytem Report register */
 		add_settings_section(
 			'nuno_sarmento_nsss_plugin_page_section',
-			'', // Title
+			'',
 			'ns_nsss_snapshot_report_callback',
 			'ns-nsss-setting-report'
 		);
 
-		// How to use register
+		/* How to use register */
 		add_settings_section(
 			'nuno_sarmento_nsss_plugin_page_section',
-			'', // Title
+			'',
 			'ns_nsss_usage_callback',
 			'ns-nsss-setting-usage'
 		);
 
 }
 
-/* ------------------------------------------
-// Style and Autoplay ----------------
---------------------------------------------- */
 
-function nuno_sarmento_nsss_style_render(  ) {
+/**
+ * Style render
+ */
+function nuno_sarmento_nsss_style_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_style', 'false' );
 	?>
@@ -190,7 +165,10 @@ function nuno_sarmento_nsss_style_render(  ) {
 
 }
 
-function nuno_sarmento_nsss_auto_render(  ) {
+/**
+ * Auto render
+ */
+function nuno_sarmento_nsss_auto_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_auto', 1 );
 	?>
@@ -198,7 +176,10 @@ function nuno_sarmento_nsss_auto_render(  ) {
 	<?php
 }
 
-function nuno_sarmento_nsss_speed_render(  ) {
+/**
+ * Speed render
+ */
+function nuno_sarmento_nsss_speed_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_speed', 4000 );
 	?>
@@ -206,11 +187,10 @@ function nuno_sarmento_nsss_speed_render(  ) {
 	<?php
 }
 
-/* ------------------------------------------
-// Arrows and Dots          ----------------
---------------------------------------------- */
-
-function nuno_sarmento_nsss_arrows_render(  ) {
+/**
+ * Arrows render
+ */
+function nuno_sarmento_nsss_arrows_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_arrows', 1 );
 	?>
@@ -218,7 +198,10 @@ function nuno_sarmento_nsss_arrows_render(  ) {
 	<?php
 }
 
-function nuno_sarmento_nsss_arrowscolor_render(  ) {
+/**
+ * Arrowscolor render
+ */
+function nuno_sarmento_nsss_arrowscolor_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_arrowscolor', '#000000' );
 	?>
@@ -226,7 +209,10 @@ function nuno_sarmento_nsss_arrowscolor_render(  ) {
 	<?php
 }
 
-function nuno_sarmento_nsss_dots_render(  ) {
+/**
+ * Dots render
+ */
+function nuno_sarmento_nsss_dots_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_dots', 1 );
 	?>
@@ -234,7 +220,10 @@ function nuno_sarmento_nsss_dots_render(  ) {
 	<?php
 }
 
-function nuno_sarmento_nsss_dotscolor_render(  ) {
+/**
+ * Dotscolor render
+ */
+function nuno_sarmento_nsss_dotscolor_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_dotscolor', '#000000' );
 	?>
@@ -242,11 +231,10 @@ function nuno_sarmento_nsss_dotscolor_render(  ) {
 	<?php
 }
 
-/* ------------------------------------------
-// Height    --------------------------------
---------------------------------------------- */
-
-function nuno_sarmento_nsss_height_render(  ) {
+/**
+ * Height_render
+ */
+function nuno_sarmento_nsss_height_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_height', 1 );
 	?>
@@ -254,11 +242,10 @@ function nuno_sarmento_nsss_height_render(  ) {
 	<?php
 }
 
-/* ------------------------------------------
-// Slides to show & Slides to scroll --------
---------------------------------------------- */
-
-function nuno_sarmento_nsss_slidestoshow_render(  ) {
+/**
+ * Slidestoshow_render
+ */
+function nuno_sarmento_nsss_slidestoshow_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_slidestoshow', 3 );
 	?>
@@ -266,7 +253,10 @@ function nuno_sarmento_nsss_slidestoshow_render(  ) {
 	<?php
 }
 
-function nuno_sarmento_nsss_slidestoscroll_render(  ) {
+/**
+ * Slidestoscroll_render
+ */
+function nuno_sarmento_nsss_slidestoscroll_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_slidestoscroll', 3 );
 	?>
@@ -274,7 +264,10 @@ function nuno_sarmento_nsss_slidestoscroll_render(  ) {
 	<?php
 }
 
-function nuno_sarmento_nsss_infinite_render(  ) {
+/**
+ * Infinite_render
+ */
+function nuno_sarmento_nsss_infinite_render() {
 
 	$options = get_option( 'nuno_sarmento_nsss_infinite', 1 );
 	?>
@@ -282,24 +275,19 @@ function nuno_sarmento_nsss_infinite_render(  ) {
 	<?php
 }
 
-
-/* ------------------------------------------
-// Settings section callback-----------------
---------------------------------------------- */
-
-function nuno_sarmento_nsss_settings_section_callback(  ) {
-
+/**
+ * Section_callback
+ */
+function nuno_sarmento_nsss_settings_section_callback() {
 	echo __( 'Choose options to customize your slider.', 'nuno-sarmento-nsss-slick-slider' );
-
 }
 
-/* ------------------------------------------
-// The Admin page--------------------------------
---------------------------------------------- */
-
+/**
+ * The Admin page
+ */
 function nuno_sarmento_nsss_options_page() {
 
-	if ( !current_user_can( 'manage_options' ) )  {
+	if ( ! current_user_can( 'manage_options' ) ) {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
 	$usage_Screen = ( isset( $_GET['action'] ) && 'usage' == $_GET['action'] ) ? true : false;
@@ -358,171 +346,21 @@ function nuno_sarmento_nsss_options_page() {
 	<?php
 }
 
-
-function ns_nsss_about_callback() {
-	if ( !current_user_can( 'manage_options' ) )  {
-		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
-	} ?>
-
-	 <h1>'Nuno Sarmento' Plugins Colection</h1>
-
-				<div class="wrap">
-
-							<p class="clear"></p>
-
-							<div class="plugin-group">
-
-							<div class="plugin-card">
-
-								 <div class="plugin-card-top">
-
-										 <a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-slick-slider/" class="plugin-icon" target="_blank">
-										 	 <style type="text/css">#plugin-icon-nuno-sarmento-slick-slider { width:128px; height:128px; background-image: url(//ps.w.org/nuno-sarmento-slick-slider/assets/icon-128x128.png?rev=1588561); background-size:128px 128px; }@media only screen and (-webkit-min-device-pixel-ratio: 1.5) { #plugin-icon-nuno-sarmento-slick-slider { background-image: url(//ps.w.org/nuno-sarmento-slick-slider/assets/icon-256x256.png?rev=1588561); } }</style>
-											 <div class="plugin-icon" id="plugin-icon-nuno-sarmento-slick-slider" style="float:left; margin: 3px 6px 6px 0px;"></div>
-										 </a>
-
-										 <div class="name column-name" style="float: right;">
-										    <h4><a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-slick-slider/" target="_blank">Nuno Sarmento Slick Slider</a></h4>
-									 	 </div>
-
-								</div>
-
-								<div class="plugin-card-bottom">
-									<p class="authors"><cite>By: <a href="//profiles.wordpress.org/nunosarmento/" target="_blank">Nuno Morais Sarmento</a>.</cite></p>
-								</div>
-
-							</div>
-
-							<div class="plugin-card">
-
-								 <div class="plugin-card-top">
-
-										 <a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-custom-css-js/" class="plugin-icon" target="_blank">
-										 	 <style type="text/css">#plugin-icon-nuno-sarmento-custom-css-js { width:128px; height:128px; background-image: url(//ps.w.org/nuno-sarmento-custom-css-js/assets/icon-128x128.png?rev=1588566); background-size:128px 128px; }@media only screen and (-webkit-min-device-pixel-ratio: 1.5) { #plugin-icon-nuno-sarmento-custom-css-js { background-image: url(//ps.w.org/nuno-sarmento-custom-css-js/assets/icon-256x256.png?rev=1588566); } }</style>
-											 <div class="plugin-icon" id="plugin-icon-nuno-sarmento-custom-css-js" style="float:left; margin: 3px 6px 6px 0px;"></div>
-										 </a>
-
-										 <div class="name column-name" style="float: right;">
-										 		<h4><a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-custom-css-js/" target="_blank">Nuno Sarmento Custom CSS - JS</a></h4>
-									 	 </div>
-
-								</div>
-
-								<div class="plugin-card-bottom">
-									<p class="authors"><cite>By: <a href="//profiles.wordpress.org/nunosarmento/" target="_blank">Nuno Morais Sarmento</a>.</cite></p>
-								</div>
-
-							</div>
-
-							<div class="plugin-card">
-
-								 <div class="plugin-card-top">
-
-										 <a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-social-icons/" class="plugin-icon" target="_blank">
-											 <style type="text/css">#plugin-icon-nuno-sarmento-social-icons { width:128px; height:128px; background-image: url(//ps.w.org/nuno-sarmento-social-icons/assets/icon-128x128.png?rev=1588574); background-size:128px 128px; }@media only screen and (-webkit-min-device-pixel-ratio: 1.5) { #plugin-icon-nuno-sarmento-social-icons { background-image: url(//ps.w.org/nuno-sarmento-social-icons/assets/icon-256x256.png?rev=1588574); } }</style>
-											 <div class="plugin-icon" id="plugin-icon-nuno-sarmento-social-icons" style="float:left; margin: 3px 6px 6px 0px;"></div>
-										 </a>
-
-										 <div class="name column-name" style="float: right;">
-										 		<h4><a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-social-icons/" target="_blank">Nuno Sarmento Social Icons</a></h4>
-									 	 </div>
-
-								</div>
-
-								<div class="plugin-card-bottom">
-									<p class="authors"><cite>By: <a href="//profiles.wordpress.org/nunosarmento/" target="_blank">Nuno Morais Sarmento</a>.</cite></p>
-								</div>
-
-							</div>
-
-							<div class="plugin-card">
-
-								 <div class="plugin-card-top">
-
-									 <a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-page-builder/" class="plugin-icon" target="_blank">
-									 	  <style type="text/css">#plugin-icon-nuno-sarmento-page-builder { width:128px; height:128px; background-image: url(//ps.w.org/nuno-sarmento-page-builder/assets/icon-128x128.png?rev=1588552); background-size:128px 128px; }@media only screen and (-webkit-min-device-pixel-ratio: 1.5) { #plugin-icon-nuno-sarmento-page-builder { background-image: url(//ps.w.org/nuno-sarmento-page-builder/assets/icon-256x256.png?rev=1588552); } }</style>
-									 	  <div class="plugin-icon" id="plugin-icon-nuno-sarmento-page-builder" style="float:left; margin: 3px 6px 6px 0px;"></div>
-								 	 </a>
-
-									 <div class="name column-name" style="float: right;">
-									 <h4><a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-page-builder/" target="_blank">Nuno Sarmento Page Builder</a></h4>
-
-								 </div>
-
-								</div>
-
-								<div class="plugin-card-bottom">
-									<p class="authors"><cite>By: <a href="//profiles.wordpress.org/nunosarmento/" target="_blank">Nuno Morais Sarmento</a>.</cite></p>
-								</div>
-
-							</div>
-
-							<div class="plugin-card">
-
-								 <div class="plugin-card-top">
-
-										 <a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-popup/" class="plugin-icon" target="_blank">
-											 <style type="text/css">#plugin-icon-nuno-sarmento-popup { width:128px; height:128px; background-image: url(//ps.w.org/nuno-sarmento-popup/assets/icon-128x128.png?rev=1593940); background-size:128px 128px; }@media only screen and (-webkit-min-device-pixel-ratio: 1.5) { #plugin-icon-nuno-sarmento-popup { background-image: url(//ps.w.org/nuno-sarmento-popup/assets/icon-256x256.png?rev=1593940); } }</style>
-											 <div class="plugin-icon" id="plugin-icon-nuno-sarmento-popup" style="float:left; margin: 3px 6px 6px 0px;"></div>
-										 </a>
-
-										 <div class="name column-name" style="float: right;">
-										    <h4><a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-popup/" target="_blank" >Nuno Sarmento PopUp</a></h4>
-									   </div>
-
-								</div>
-
-								<div class="plugin-card-bottom">
-									<p class="authors"><cite>By: <a href="//profiles.wordpress.org/nunosarmento/" target="_blank">Nuno Morais Sarmento</a>.</cite></p>
-								</div>
-
-						 </div>
-
-
-						 <div class="plugin-card">
-
-						 	 <div class="plugin-card-top">
-
-						 		 <a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-api-to-post/" class="plugin-icon">
-									 <style type="text/css">#plugin-icon-nuno-sarmento-api-to-post { width:128px; height:128px; background-image: url(//ps.w.org/nuno-sarmento-api-to-post/assets/icon-128x128.png?rev=1594469); background-size:128px 128px; }@media only screen and (-webkit-min-device-pixel-ratio: 1.5) { #plugin-icon-nuno-sarmento-api-to-post { background-image: url(//ps.w.org/nuno-sarmento-api-to-post/assets/icon-256x256.png?rev=1594469); } }</style>
-									 <div class="plugin-icon" id="plugin-icon-nuno-sarmento-api-to-post" style="float:left; margin: 3px 6px 6px 0px;"></div>
-							 	 </a>
-
-						 		 <div class="name column-name">
-						 			 <h4><a href="https://en-gb.wordpress.org/plugins/nuno-sarmento-api-to-post/">Nuno Sarmento API To Post</a></h4>
-						 		 </div>
-
-						 	</div>
-
-							<div class="plugin-card-bottom">
-								<p class="authors"><cite>By: <a href="//profiles.wordpress.org/nunosarmento/" target="_blank">Nuno Morais Sarmento</a>.</cite></p>
-							</div>
-
-			 </div>
-
-		</div>
-
-</div>
-
-<?php
-
-}
-
-
+/**
+ * Usage_callback
+ */
 function ns_nsss_usage_callback(){
 
-	if ( !current_user_can( 'manage_options' ) )  {
+	if ( ! current_user_can( 'manage_options' ) ) {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
-	} ?>
+	}
+ ?>
 
-
-	<h3><?php _e('How to use','nuno-sarmento-nsss-slick-slider'); ?></h3>
-	<p><?php _e('First, create your slider, go to "NS Slider => Add New". <br>Enter the title and the featured image and content.','nuno-sarmento-nsss-slick-slider'); ?></p>
-	<p><?php _e('Then, to output the slider, just add the shortcode by clicking the button (slider icon) on the WordPress Visual Editor or added it manually the shortcode <br> <code>[slick_slider_tend]</code><br><br> in a post or page, or use the function <code>&lt;?php nuno_sarmento_nsss_slider(); ?&gt;</code> in your theme templates.<br>','nuno-sarmento-nsss-slick-slider'); ?></p>
-
-
-	<h3><?php _e('CSS customization','nuno-sarmento-nsss-slick-slider'); ?></h3>
-	<p><?php _e('If you want to customize the output of the slider, here is the generated code:','nuno-sarmento-nsss-slick-slider'); ?></p>
+	<h3><?php _e( 'How to use','nuno-sarmento-nsss-slick-slider' ); ?></h3>
+	<p><?php _e( 'First, create your slider, go to "NS Slider => Add New". <br>Enter the title and the featured image and content - the feature image will be used as slider image.','nuno-sarmento-nsss-slick-slider' ); ?></p>
+	<p><?php _e( 'To output the posts sliders please add the shortcode by clicking the button (slider icon) on the WordPress Visual Editor or added it manually with the shortcode. <br> <code>[slick_slider_ns]</code><br><br> in a post or page, or use the function <code>&lt;?php nuno_sarmento_nsss_slider(); ?&gt;</code> in your theme templates.<br>','nuno-sarmento-nsss-slick-slider' ); ?></p>
+	<h3><?php _e( 'CSS customization','nuno-sarmento-nsss-slick-slider' ); ?></h3>
+	<p><?php _e( 'If you want to customize the output of the slider, here is the generated code:','nuno-sarmento-nsss-slick-slider' ); ?></p>
 
 <pre>
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -545,26 +383,23 @@ function ns_nsss_usage_callback(){
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 </pre>
 
-
-	<p><?php _e('Your can override the class you need in your own stylesheet:','nuno-sarmento-nsss-slick-slider'); ?></p>
-
+	<p><?php _e('Your can override the class you need in your own stylesheet:','nuno-sarmento-nsss-slick-slider' ); ?></p>
 	<ul>
-		<li><code>.slicky-slides</code> : <?php _e('The slider container','nuno-sarmento-nsss-slick-slider'); ?></li>
-		<li><code>.slicky-item</code> : <?php _e('The slide','nuno-sarmento-nsss-slick-slider'); ?></li>
-		<li><code>.slicky-figure</code> : <?php _e('The image container','nuno-sarmento-nsss-slick-slider'); ?></li>
-		<li><code>.slicky-caption</code> : <?php _e('The caption container','nuno-sarmento-nsss-slick-slider'); ?></li>
+		<li><code>.slicky-slides</code> : <?php _e( 'The slider container','nuno-sarmento-nsss-slick-slider' ); ?></li>
+		<li><code>.slicky-item</code> : <?php _e( 'The slide','nuno-sarmento-nsss-slick-slider' ); ?></li>
+		<li><code>.slicky-figure</code> : <?php _e( 'The image container','nuno-sarmento-nsss-slick-slider' ); ?></li>
+		<li><code>.slicky-caption</code> : <?php _e( 'The caption container','nuno-sarmento-nsss-slick-slider' ); ?></li>
 	</ul>
-
-
-	<h3><?php _e('Credits','nuno-sarmento-nsss-slick-slider'); ?></h3>
-
-	<p><?php _e('This plugin is based on Slick, a jQuery plugin by Ken Wheeler. You can visit the official website here: <a href="https://kenwheeler.github.io/slick/" title="Slick official site">https://kenwheeler.github.io/slick/','nuno-sarmento-nsss-slick-slider'); ?></a></p>
+	<h3><?php _e( 'Credits','nuno-sarmento-nsss-slick-slider' ); ?></h3>
+	<p><?php _e( 'This plugin is based on Slick, a jQuery plugin by Ken Wheeler. You can visit the official website here: <a href="https://kenwheeler.github.io/slick/" title="Slick official site">https://kenwheeler.github.io/slick/','nuno-sarmento-nsss-slick-slider' ); ?></a></p>
 
 	<?php
 }
 
 
-
+/**
+ * Report_callback
+ */
 function ns_nsss_snapshot_report_callback() {
 		?>
 <div class="wrap nuno-sarmento-system-wrap">
@@ -582,6 +417,8 @@ function ns_nsss_snapshot_report_callback() {
 	 <?php
 }
 
+
+
 function ns_nsss_snapshot_data() {
 
 	if ( !current_user_can( 'manage_options' ) )  {
@@ -593,7 +430,7 @@ function ns_nsss_snapshot_data() {
 
 	// check for browser class add on
 	if ( ! class_exists( 'Browser' ) ) {
-		require_once NUNO_SARMENTO_SLICK_SLIDER_PATH . 'includes/nuno-sarmento-nsss-browser.php';
+		require_once NUNO_SARMENTO_SLICK_SLIDER_PATH . 'includes/ns-system-snapshot.php';
 	}
 
 	// do WP version check and get data accordingly
@@ -773,10 +610,12 @@ function ns_nsss_snapshot_data() {
 	return $report;
 }
 
-
+/**
+ * Num_convt
+ */
 function ns_nsss_num_convt( $v ) {
 
-	if ( !current_user_can( 'manage_options' ) )  {
+	if ( ! current_user_can( 'manage_options' ) ) {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
 
@@ -784,11 +623,11 @@ function ns_nsss_num_convt( $v ) {
 	$ret = substr( $v, 0, -1 );
 
 	switch ( strtoupper( $l ) ) {
-		case 'P': // fall-through
-		case 'T': // fall-through
-		case 'G': // fall-through
-		case 'M': // fall-through
-		case 'K': // fall-through
+		case 'P':
+		case 'T':
+		case 'G':
+		case 'M':
+		case 'K':
 			$ret *= 1024;
 			break;
 		default:
